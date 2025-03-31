@@ -35,10 +35,10 @@ type Number[T constraints.Ordered] struct {
 	val T
 }
 
-// Method for Number struct that multiplies its value
-func (n Number[T]) Multiply(factor T) T {
-	return n.val * factor
-}
+// // Method for Number struct that multiplies its value
+// func (n Number[T]) Multiply(factor T) T {
+// 	return n.val * factor
+// }
 
 // 5. Generic Function with Multiple Type Parameters
 func Compare[T constraints.Ordered, U constraints.Ordered](a T, b U) string {
@@ -67,8 +67,8 @@ func genericsMain() {
 	fmt.Println("Box Value:", intBox.GetValue())
 
 	// Using Generic Interface Implementation
-	num := Number[int]{val: 10}
-	fmt.Println("Multiply:", num.Multiply(2))
+	// num := Number[int]{val: 10}
+	// fmt.Println("Multiply:", num.Multiply(2))
 
 	// Using Multiple Type Parameters
 	fmt.Println("Compare Int and Float:", Compare(5, 5.0))
