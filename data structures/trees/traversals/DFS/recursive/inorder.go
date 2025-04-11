@@ -20,26 +20,6 @@ func InOrder(root *Node) {
 	InOrder(root.right)
 }
 
-// PreOrder Traversal (Root, Left, Right)
-func PreOrder(root *Node) {
-	if root == nil {
-		return
-	}
-	fmt.Print(root.data, " ")
-	PreOrder(root.left)
-	PreOrder(root.right)
-}
-
-// PostOrder Traversal (Left, Right, Root)
-func PostOrder(root *Node) {
-	if root == nil {
-		return
-	}
-	PostOrder(root.left)
-	PostOrder(root.right)
-	fmt.Print(root.data, " ")
-}
-
 func DFSTraversals() {
 	// Creating a sample binary tree
 	root := &Node{data: 1}
@@ -52,13 +32,5 @@ func DFSTraversals() {
 
 	fmt.Println("InOrder Traversal:")
 	InOrder(root)
-	fmt.Println()
-
-	fmt.Println("PreOrder Traversal:")
-	PreOrder(root)
-	fmt.Println()
-
-	fmt.Println("PostOrder Traversal:")
-	PostOrder(root)
 	fmt.Println()
 }

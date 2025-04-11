@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+
+
 func main() {
 	var a uint8 = 12 // 00001100
 	var b uint8 = 10 // 00001010
