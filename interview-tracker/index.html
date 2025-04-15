@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Interview Preparation Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Add a code font for better readability -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <h1>Tech Interview Prep Tracker</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search topics...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <div class="user-progress">
+                    <div class="profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span>My Progress</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" id="overall-progress"></div>
+                    </div>
+                    <span id="progress-percentage">0%</span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li class="active" data-section="dashboard"><i class="fas fa-home"></i>Dashboard</li>
+                    <li data-section="data-structures"><i class="fas fa-project-diagram"></i>Data Structures</li>
+                    <li data-section="algorithms"><i class="fas fa-cogs"></i>Algorithms</li>
+                    <li data-section="java-concepts"><i class="fab fa-java"></i>Java Concepts</li>
+                    <li data-section="system-design"><i class="fas fa-sitemap"></i>System Design</li>
+                    <li data-section="behavioral"><i class="fas fa-users"></i>Behavioral</li>
+                    <li data-section="leetcode"><i class="fas fa-code"></i>LeetCode Problems</li>
+                    <li data-section="study-plan"><i class="fas fa-calendar-alt"></i>Study Plan</li>
+                    <li data-section="settings"><i class="fas fa-cog"></i>Settings</li>
+                </ul>
+            </nav>
+
+            <main class="content" id="main-content">
+                <!-- Content will be loaded dynamically -->
+            </main>
+        </div>
+    </div>
+
+    <!-- Load libraries first -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    
+    <!-- Load app data and core scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    
+    <!-- Load section scripts -->
+    <script src="js/sections/dataStructures.js"></script>
+    <script src="js/sections/algorithms.js"></script>
+    <script src="js/sections/javaConcepts.js"></script>
+    <script src="js/sections/systemDesign.js"></script>
+    <script src="js/sections/behavioral.js"></script>
+    <script src="js/sections/leetcode.js"></script>
+    <script src="js/sections/studyPlan.js"></script>
+    <script src="js/sections/settings.js"></script>
+    
+    <script>
+        // Initialize the application when loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initApp();
+        });
+    </script>
+</body>
+</html>
